@@ -353,7 +353,14 @@ var WebAudioSoundManager = new Class({
 
         if (this.game.config.audio && this.game.config.audio.context)
         {
-            this.context.suspend();
+            if (this.game.config.audio.preventCustomCtxSuspendOnDestroy)
+            {
+                console.log('preventing context suspension on audio sound manager destroy');
+            }
+            else
+            {
+                this.context.suspend();
+            }
         }
         else
         {
