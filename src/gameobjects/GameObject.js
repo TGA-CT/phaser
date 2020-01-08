@@ -592,7 +592,7 @@ var GameObject = new Class({
             this.input = undefined;
         }
 
-        if (this.data)
+        if (this.data && this.data.destroy)
         {
             this.data.destroy();
 
