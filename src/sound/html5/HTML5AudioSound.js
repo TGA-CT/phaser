@@ -381,6 +381,10 @@ var HTML5AudioSound = new Class({
      */
     stopAndReleaseAudioTag: function ()
     {
+        if (!this.audio || !this.audio.pause)
+        {
+            return;
+        }
         this.audio.pause();
         this.audio.dataset.used = 'false';
         this.audio = null;
