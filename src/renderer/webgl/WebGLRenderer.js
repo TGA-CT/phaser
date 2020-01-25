@@ -2941,6 +2941,7 @@ var WebGLRenderer = new Class({
         this.contextLost = true;
 
         this.extensions = {};
+        this.currentTextures = new Array(16);
     }
 
 });

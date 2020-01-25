@@ -1621,7 +1621,8 @@ var SceneManager = new Class({
         this.update = NOOP;
 
         this.scenes = [];
-
+        this.keys = {};
+        
         this._pending = [];
         this._start = [];
         this._queue = [];
